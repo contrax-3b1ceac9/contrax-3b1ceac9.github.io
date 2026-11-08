@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>黑料大赛吃瓜网-热门爆料合集_通勤吃瓜精选_爆料频道怎么选</title>
+<meta name="description" content="黑料大赛吃瓜网汇集热门爆料合集与吃瓜精选内容，按爆料类型、热度与更新节奏整理，适合通勤、睡前快速浏览，也提供频道对比与追更路径参考。">
+<meta name="keywords" content="热门爆料合集,吃瓜精选,爆料频道,网络热点整理,追更爆料">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23161a22'/%3E%3Ccircle cx='26' cy='30' r='9' fill='%23ff7a45'/%3E%3Ccircle cx='44' cy='24' r='5' fill='%23ffd166'/%3E%3Cpath d='M14 48c8-8 28-8 36 0' stroke='%23ff7a45' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#0f1218;
+  --bg-soft:#161b24;
+  --panel:#1c222d;
+  --panel-2:#222a37;
+  --line:#2c3542;
+  --text:#e8ecf3;
+  --text-2:#b3bdcb;
+  --text-3:#8794a6;
+  --brand:#ff7a45;
+  --brand-2:#ffd166;
+  --brand-3:#5ec8ff;
+  --ok:#5ad19a;
+  --radius:14px;
+  --radius-sm:9px;
+  --shadow:0 10px 28px rgba(0,0,0,.35);
+  --w:1360px;
+  --announce-h:38px;
+  --header-h:64px;
+  --offset:calc(var(--announce-h) + var(--header-h) + 14px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--offset)}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.75;
+}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%}
+h1,h2,h3,h4,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+button{font-family:inherit}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--brand-3);outline-offset:2px;border-radius:4px}
+
+/* 吸顶公告条 + 页头 */
+.topbar{position:sticky;top:0;z-index:60}
+.announce{
+  height:var(--announce-h);display:flex;align-items:center;
+  background:linear-gradient(90deg,#3a1f12,#241a22 45%,#12202a);
+  border-bottom:1px solid var(--line);font-size:13px;color:var(--text-2);
+}
+.announce .wrap{display:flex;align-items:center;gap:12px;overflow:hidden}
+.announce .dot{width:7px;height:7px;border-radius:50%;background:var(--brand);flex:none;box-shadow:0 0 0 4px rgba(255,122,69,.18)}
+.announce .txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.announce .txt b{color:var(--brand-2);font-weight:600}
+.announce .ann-link{margin-left:auto;color:var(--brand-2);flex:none;font-weight:600}
+
+.header{
+  height:var(--header-h);background:rgba(15,18,24,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header .wrap{display:flex;align-items:center;gap:22px;height:100%}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:36px;height:36px;flex:none}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.brand-name span{color:var(--brand)}
+.top-nav{display:flex;gap:4px;flex:1;min-width:0;overflow:hidden}
+.top-nav a{
+  padding:7px 11px;border-radius:8px;font-size:14px;color:var(--text-2);white-space:nowrap;
+}
+.top-nav a:hover,.top-nav a.on{background:var(--panel);color:var(--text)}
+.head-search{display:flex;align-items:center;gap:6px;flex:none}
+.head-search input{
+  width:170px;background:var(--panel);border:1px solid var(--line);color:var(--text);
+  border-radius:8px;padding:7px 10px;font-size:13px;
+}
+.head-search input::placeholder{color:var(--text-3)}
+.head-search button{
+  background:var(--brand);border:0;color:#1a1005;font-weight:700;border-radius:8px;
+  padding:7px 12px;font-size:13px;cursor:pointer;
+}
+.head-search button:hover{filter:brightness(1.08)}
+.menu-btn{display:none;background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 11px;cursor:pointer}
+
+/* 首屏 */
+.hero{padding:26px 0 6px;background:
+  radial-gradient(900px 320px at 12% -10%,rgba(255,122,69,.16),transparent 65%),
+  radial-gradient(700px 300px at 88% 0%,rgba(94,200,255,.12),transparent 65%)}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--brand-2);
+  background:rgba(255,209,102,.1);border:1px solid rgba(255,209,102,.28);padding:4px 10px;border-radius:999px}
+h1{font-size:34px;line-height:1.28;margin:12px 0 10px;letter-spacing:.5px;font-weight:800}
+.hero p.lead{color:var(--text-2);font-size:15px;max-width:620px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 18px}
+.hero-tags span{font-size:12.5px;color:var(--text-2);background:var(--panel);border:1px solid var(--line);padding:5px 10px;border-radius:999px}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid transparent}
+.btn-primary{background:var(--brand);color:#1a1005}
+.btn-ghost{background:var(--panel);border-color:var(--line);color:var(--text)}
+.hero-visual{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:var(--shadow)}
+.vis-head{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;color:var(--text-3);margin-bottom:10px}
+.vis-head b{color:var(--brand-2)}
+.vis-row{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:var(--panel-2);margin-bottom:8px}
+.vis-row:last-child{margin-bottom:0}
+.vis-rank{width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font-size:12px;font-weight:800;background:rgba(255,122,69,.15);color:var(--brand);flex:none}
+.vis-row:nth-child(3) .vis-rank{background:rgba(255,209,102,.15);color:var(--brand-2)}
+.vis-row:nth-child(4) .vis-rank{background:rgba(94,200,255,.15);color:var(--brand-3)}
+.vis-name{font-size:13.5px;font-weight:600;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vis-tag{font-size:11.5px;color:var(--text-3);flex:none}
+.heat{height:5px;width:64px;border-radius:99px;background:#2a3340;overflow:hidden;flex:none}
+.heat i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+
+/* 三栏 */
+.layout{display:grid;grid-template-columns:180px minmax(0,1fr) 250px;gap:24px;padding:22px 0 40px;align-items:start}
+.side{position:sticky;top:var(--offset)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.side-title{font-size:13px;font-weight:700;color:var(--text-2);letter-spacing:.5px;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.side-title::before{content:"";width:3px;height:13px;border-radius:2px;background:var(--brand)}
+.chan{display:flex;flex-direction:column;gap:2px}
+.chan a{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:7px 9px;border-radius:8px;font-size:13.5px;color:var(--text-2)}
+.chan a:hover{background:var(--panel-2);color:var(--text)}
+.chan a em{font-style:normal;font-size:11px;color:var(--text-3)}
+.side + .side{margin-top:16px}
+.toc a{display:block;padding:6px 9px;border-left:2px solid var(--line);font-size:13px;color:var(--text-2)}
+.toc a:hover{color:var(--brand-2);border-left-color:var(--brand)}
+
+/* 中栏板块 */
+.section{margin-bottom:26px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:12px}
+.sec-head h2{font-size:20px;font-weight:800;letter-spacing:.3px}
+.sec-head h2 small{display:block;font-size:12.5px;font-weight:400;color:var(--text-3);margin-top:3px;letter-spacing:0}
+.sec-more{font-size:13px;color:var(--brand-2);flex:none}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.c-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:13px;display:flex;flex-direction:column;gap:8px;transition:.18s}
+.c-card:hover{border-color:#3b4757;transform:translateY(-2px)}
+.c-top{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--text-3)}
+.type{background:rgba(255,122,69,.14);color:var(--brand);padding:2px 7px;border-radius:6px;font-weight:700}
+.c-card h3{font-size:14.5px;line-height:1.45;font-weight:700}
+.c-card p{font-size:12.5px;color:var(--text-2);line-height:1.65}
+.c-tags{display:flex;flex-wrap:wrap;gap:5px}
+.c-tags span{font-size:11px;color:var(--text-3);background:var(--panel-2);padding:2px 7px;border-radius:5px}
+.c-meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--text-3);border-top:1px dashed var(--line);padding-top:7px;margin-top:auto}
+.c-meta b{color:var(--brand-2);font-weight:700}
+
+.list-up li{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.list-up li:last-child{border-bottom:0}
+.list-up .time{font-size:12px;color:var(--text-3);flex:none;width:52px}
+.list-up .nm{font-size:14px;font-weight:600;flex:none}
+.list-up .ds{font-size:12.5px;color:var(--text-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:4px}
+.cat b{font-size:14px}
+.cat span{font-size:11.5px;color:var(--text-3)}
+.cat:hover{border-color:var(--brand);background:var(--panel-2)}
+
+.article{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.article h3{font-size:16.5px;margin:20px 0 8px;color:var(--brand-2)}
+.article h3:first-child{margin-top:0}
+.article p{font-size:14.5px;color:var(--text-2);margin-bottom:10px;line-height:1.85}
+.article ul{margin:6px 0 12px}
+.article ul li{position:relative;padding-left:16px;font-size:14px;color:var(--text-2);margin-bottom:6px;line-height:1.8}
+.article ul li::before{content:"";position:absolute;left:2px;top:11px;width:5px;height:5px;border-radius:50%;background:var(--brand)}
+.note{background:var(--panel-2);border-left:3px solid var(--brand);border-radius:8px;padding:10px 13px;font-size:13.5px;color:var(--text-2);margin:12px 0}
+
+.compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}
+.cmp{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:12px}
+.cmp b{display:block;font-size:13.5px;margin-bottom:6px;color:var(--brand-2)}
+.cmp p{font-size:12.5px;margin:0;color:var(--text-2)}
+
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:9px;overflow:hidden}
+.faq summary{cursor:pointer;padding:12px 14px;font-size:14px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brand);font-weight:800;flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq .ans{padding:0 14px 13px;font-size:13.5px;color:var(--text-2);line-height:1.8}
+
+.cmts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cmt{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.avatar{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;color:#1a1005;background:var(--brand-2)}
+.cmt .who b{font-size:12.5px}
+.cmt .who i{font-style:normal;font-size:11px;color:var(--text-3);margin-left:auto}
+.cmt p{font-size:12.8px;color:var(--text-2);line-height:1.7}
+
+.news li{padding:11px 0;border-bottom:1px dashed var(--line)}
+.news li:last-child{border-bottom:0}
+.news .nh{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.news .nh b{font-size:14px}
+.news .nh time{font-size:11.5px;color:var(--text-3)}
+.news p{font-size:12.8px;color:var(--text-2);margin-top:3px}
+
+.reco{display:flex;flex-wrap:wrap;gap:8px}
+.reco a{font-size:12.8px;color:var(--text-2);background:var(--panel);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.reco a:hover{border-color:var(--brand);color:var(--brand-2)}
+
+.quote{background:linear-gradient(135deg,rgba(255,122,69,.12),rgba(94,200,255,.08));border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.quote p{font-size:14.5px;color:var(--text);line-height:1.85}
+.quote .by{margin-top:10px;font-size:12.5px;color:var(--text-3)}
+
+.steps{counter-reset:s;display:grid;gap:9px}
+.step{display:flex;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.step::before{counter-increment:s;content:counter(s);width:24px;height:24px;flex:none;border-radius:7px;display:grid;place-items:center;font-size:12px;font-weight:800;background:rgba(94,200,255,.15);color:var(--brand-3)}
+.step b{font-size:13.5px;display:block}
+.step span{font-size:12.5px;color:var(--text-2)}
+
+/* 右栏 */
+.rank li{display:flex;gap:9px;padding:8px 0;border-bottom:1px dashed var(--line);align-items:baseline;font-size:13px}
+.rank li:last-child{border-bottom:0}
+.rank .no{width:18px;flex:none;font-weight:800;color:var(--text-3);font-size:12px}
+.rank li:nth-child(1) .no,.rank li:nth-child(2) .no,.rank li:nth-child(3) .no{color:var(--brand)}
+.rank .tx{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text-2)}
+.rank .hm{font-size:11px;color:var(--text-3);flex:none}
+
+/* 页尾 */
+.footer{border-top:1px solid var(--line);background:#0c0f14;padding:30px 0 20px;margin-top:10px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px}
+.foot-brand p{font-size:12.8px;color:var(--text-3);margin-top:8px;line-height:1.8}
+.foot-col h4{font-size:13px;color:var(--text-2);margin-bottom:8px}
+.foot-col a{display:block;font-size:12.5px;color:var(--text-3);padding:3px 0}
+.foot-col a:hover{color:var(--brand-2)}
+.copy{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--text-3);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+
+.nores{display:none;font-size:13px;color:var(--brand-2);padding:8px 0}
+
+@media(max-width:1120px){
+  .layout{grid-template-columns:170px minmax(0,1fr)}
+  .right-col{grid-column:1/-1;position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .right-col .side+.side{margin-top:0}
+}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .top-nav{display:none}
+  .menu-btn{display:inline-block}
+  .head-search input{width:120px}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .layout{grid-template-columns:1fr}
+  .left-col{position:static;order:-1}
+  .left-col .card{margin-bottom:14px}
+  .chan{flex-direction:row;flex-wrap:wrap;gap:6px}
+  .chan a{background:var(--panel-2);flex:none}
+  .right-col{grid-template-columns:1fr}
+  .cmts{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  h1{font-size:26px}
+}
+@media(max-width:560px){
+  .wrap{padding:0 14px}
+  .header .wrap{gap:10px}
+  .brand-name{font-size:16px}
+  .brand-mark{width:30px;height:30px}
+  .head-search input{width:96px}
+  .grid-3{grid-template-columns:1fr}
+  .article{padding:16px}
+  .sec-head h2{font-size:18px}
+  .foot-grid{grid-template-columns:1fr}
+  .list-up .ds{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="announce">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="txt">本周新增 <b>28 组爆料合集</b>，通勤吃瓜精选已更新至第 12 期 · 追更提醒开启中</span>
+      <a class="ann-link" href="/#latest">查看更新</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="黑料大赛吃瓜网首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="15" fill="#1c222d"/>
+          <circle cx="26" cy="29" r="10" fill="#ff7a45"/>
+          <circle cx="45" cy="23" r="5" fill="#ffd166"/>
+          <path d="M13 48c9-9 29-9 38 0" stroke="#ff7a45" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+          <circle cx="23" cy="27" r="2.4" fill="#161b24"/>
+        </svg>
+        <span class="brand-name">黑料大赛吃瓜网</span>
+      </a>
+
+      <nav class="top-nav" aria-label="主题导航">
+        <a href="/#hot" class="on">热门合集</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#cats">爆料分类</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#news">相关资讯</a>
+      </nav>
+
+      <form class="head-search" role="search" onsubmit="return false;">
+        <input id="q" type="search" placeholder="搜爆料名称 / 类型" aria-label="站内搜索">
+        <button type="button" id="qbtn">查找</button>
+      </form>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">频道</button>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">爆料合集 · 通勤吃瓜 · 每日整理</span>
+        <h1>黑料大赛吃瓜网</h1>
+        <p class="lead">按爆料类型与热度整理热门爆料合集，覆盖娱乐圈旧闻、网红翻车、职场争议、品牌公关等方向。每期给出一句话看点、更新节奏和适合浏览的场景，方便在通勤、午休、睡前快速挑选要看的条目。</p>
+        <div class="hero-tags">
+          <span>热门爆料合集</span>
+          <span>吃瓜精选</span>
+          <span>追更爆料</span>
+          <span>网络热点整理</span>
+          <span>完结合集</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/#hot">进入热门合集</a>
+          <a class="btn btn-ghost" href="/#deep">看频道怎么选</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="本周热度示例榜">
+        <div class="vis-head"><span>本周浏览热度示例</span><b>12 期</b></div>
+        <div class="vis-row"><span class="vis-rank">1</span><span class="vis-name">某综艺剪辑争议始末</span><span class="vis-tag">话题类</span><span class="heat"><i style="width:94%"></i></span></div>
+        <div class="vis-row"><span class="vis-rank">2</span><span class="vis-name">带货直播间话术翻车合集</span><span class="vis-tag">网红类</span><span class="heat"><i style="width:86%"></i></span></div>
+        <div class="vis-row"><span class="vis-rank">3</span><span class="vis-name">职场群聊截图事件时间线</span><span class="vis-tag">职场类</span><span class="heat"><i style="width:78%"></i></span></div>
+        <div class="vis-row"><span class="vis-rank">4</span><span class="vis-name">品牌道歉声明对比盘点</span><span class="vis-tag">公关类</span><span class="heat"><i style="width:70%"></i></span></div>
+        <div class="vis-row"><span class="vis-rank">5</span><span class="vis-name">旧采访被翻出的三条线索</span><span class="vis-tag">考古类</span><span class="heat"><i style="width:62%"></i></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏 -->
+  <div class="wrap layout">
+
+    <!-- 左栏 -->
+    <aside class="left-col" aria-label="频道与索引">
+      <div class="card side">
+        <div class="side-title">爆料频道</div>
+        <nav class="chan" aria-label="频道导航">
+          <a href="/#hot">热门合集 <em>12</em></a>
+          <a href="/#latest">最新更新 <em>10</em></a>
+          <a href="/#cats">分类入口 <em>8</em></a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">浏览指南</a>
+          <a href="/#faq">常见问答</a>
+          <a href="/#cmts">读者评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#reco">方向推荐</a>
+          <a href="/#trend">趋势观察</a>
+        </nav>
+      </div>
+
+      <div class="card side">
+        <div class="side-title">按场景找</div>
+        <nav class="chan" aria-label="场景索引">
+          <a href="/#hot">通勤吃瓜</a>
+          <a href="/#hot">睡前短看</a>
+          <a href="/#latest">追更提醒</a>
+          <a href="/#cats">完结合集</a>
+          <a href="/#deep">事件时间线</a>
+        </nav>
+      </div>
+
+      <div class="card side" id="mobileNav">
+        <div class="side-title">页内目录</div>
+        <nav class="toc" aria-label="页内目录">
+          <a href="/#intro">内容简介</a>
+          <a href="/#hot">热门内容推荐</a>
+          <a href="/#latest">最新更新</a>
+          <a href="/#cats">分类入口</a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">浏览指南</a>
+          <a href="/#faq">常见问答</a>
+          <a href="/#cmts">读者评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#reco">方向推荐</a>
+          <a href="/#trend">趋势观察</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <div class="main-col">
+
+      <!-- 1 内容简介 -->
+      <section class="section" id="intro">
+        <div class="sec-head"><h2>内容简介<small>这个站点整理什么、适合谁看</small></h2></div>
+        <div class="article">
+          <p><strong>黑料大赛吃瓜网</strong>是一个以网络热点爆料整理为主的内容站，把分散在各平台的争议事件、翻车片段、旧闻考古按类型归档，做成可以直接读完的合集。它不追求第一时间抢发，而是把一件事的起因、关键截图、后续回应放在同一条目里，让读者不必来回翻找。</p>
+          <p>站内内容大致分两类。一类是<strong>热门爆料合集</strong>，围绕某一事件把相关片段、评论与时间线收在一起，适合想一次看完整件事的人；另一类是<strong>吃瓜精选</strong>，每期挑几条轻量条目，控制在十分钟内能读完，适合通勤路上、午休或睡前随手翻。两类内容共用一套标签体系，方便从短条目跳到完整合集。</p>
+          <p>从浏览场景看，追更型读者更关心<strong>爆料频道</strong>的更新节奏与完结状态，会在意某件事有没有后续；泛浏览型读者更在意条目本身好不好看，对来源和细节要求不高。站内的分类入口和场景索引分别服务这两类需求：前者按事件类型分，后者按阅读时长和场合分。</p>
+          <p>内容组织上，每一组爆料都标注类型、热度与更新状态。热度是站内浏览量的相对排序，只用于同页比较，不代表事件本身的传播规模。更新状态分为「连载中」「已完结」「待补充」三种，连载中的条目会在后续补充回应与结果，完结条目则保留完整时间线不再改动。</p>
+          <p>如果你正在几个爆料站之间犹豫，可以先看深度解析里的频道对比部分，那里把「更新快但信息碎」和「整理全但慢半拍」两类站点的差别讲清楚了。想直接开始读，从热门合集或最新更新进入都可以，两条路径的条目会有部分重叠，但排序逻辑不同。</p>
+        </div>
+      </section>
+
+      <!-- 2 热门内容推荐 -->
+      <section class="section" id="hot">
+        <div class="sec-head">
+          <h2>热门内容推荐<small>按站内热度排序的爆料合集</small></h2>
+          <a class="sec-more" href="/#latest">换一批 →</a>
+        </div>
+        <div class="grid-3" id="hotGrid">
+          <article class="c-card">
+            <div class="c-top"><span class="type">话题类</span><span>连载中</span></div>
+            <h3>某综艺剪辑争议始末</h3>
+            <p>从花絮片段被剪到正片播出，梳理三轮回应与节目组声明的时间顺序。</p>
+            <div class="c-tags"><span>综艺争议</span><span>剪辑风波</span><span>时间线</span></div>
+            <div class="c-meta"><span>热度 <b>9821</b></span><span>更新 3 天前</span></div>
+          </article>
+          <article class="c-card">
+            <div class="c-top"><span class="type">网红类</span><span>已完结</span></div>
+            <h3>带货直播间话术翻车合集</h3>
+            <p>六段直播切片对照商品页描述，标出前后说法不一致的具体位置。</p>
+            <div class="c-tags"><span>直播切片</span><span>话术对比</span><span>完结合集</span></div>
+            <div class="c-meta"><span>热度 <b>9104</b></span><span>更新 6 天前</span></div>
+          </article>
+          <article class="c-card">
+            <div class="c-top"><span class="type">职场类</span><span>待补充</span></div>
+            <h3>职场群聊截图事件时间线</h3>
+            <p>按日期排列群聊截图与当事人回应，标注哪些环节仍缺少一方说法。</p>
+            <div class="c-tags"><span>职场争议</span><span>截图考证</span><span>追更爆料</span></div>
+            <div class="c-meta"><span>热度 <b>8760</b></span><span>更新 1 天前</span></div>
+          </article>
+          <article class="c-card">
+            <div class="c-top"><span class="type">公关类</span><span>已完结</span></div>
+            <h3>品牌道歉声明对比盘点</h3>
+            <p>把四份道歉声明放在一起，比较措辞、发布时间与后续处理动作的差异。</p>
+            <div class="c-tags"><span>公关声明</span><span>措辞对比</span><span>品牌争议</span></div>
+            <div class="c-meta"><span>热度 <b>8032</b></span><span>更新 8 天前</span></div>
+          </article>
+          <article class="c-card">
+            <div class="c-top"><span class="type">考古类</span><span>已完结</span></div>
+            <h3>旧采访被翻出的三条线索</h3>
+            <p>三段早年采访与现在的说法放在一起，说明哪些属于语境变化、哪些是真矛盾。</p>
+            <div class="c-tags"><span>旧闻考古</span><span>采访对照</span><span>语境差异</span></div>
+            <div class="c-meta"><span>热度 <b>7455</b></span><span>更新 11 天前</span></div>
+          </article>
+          <article class="c-card">
+            <div class="c-top"><span class="type">消费类</span><span>连载中</span></div>
+            <h3>预售商品延期发货追踪</h3>
+            <p>按订单批次整理发货时间变化，附平台规则中关于延期的条款原文位置。</p>
+            <div class="c-tags"><span>消费维权</span><span>发货延期</span><span>规则条款</span></div>
+            <div class="c-meta"><span>热度 <b>6918</b></span><span>更新 2 天前</span></div>
+          </article>
+          <article class="c-card">
+            <div class="c-top"><span class="type">影视类</span><span>已完结</span></div>
+            <h3>剧集番位争议完整梳理</h3>
+            <p>从官宣海报到片尾字幕，把番位变化的几个节点按发布顺序列清楚。</p>
+            <div class="c-tags"><span>番位争议</span><span>海报对比</span><span>完整梳理</span></div>
+            <div class="c-meta"><span>热度 <b>6540</b></span><span>更新 9 天前</span></div>
+          </article>
+          <article class="c-card">
+            <div class="c-top"><span class="type">校园类</span><span>待补充</span></div>
+            <h3>校园活动评选争议记录</h3>
+            <p>投票页面截图与最终名单对照，整理规则说明中出现过的三种解释。</p>
+            <div class="c-tags"><span>评选争议</span><span>投票记录</span><span>规则解释</span></div>
+            <div class="c-meta"><span>热度 <b>5872</b></span><span>更新 4 天前</span></div>
+          </article>
+          <article class="c-card">
+            <div class="c-top"><span class="type">体育类</span><span>已完结</span></div>
+            <h3>赛后采访口误传播路径</h3>
+            <p>一段采访被截取传播的四个版本，对照原始视频说明剪辑点差异。</p>
+            <div class="c-tags"><span>采访剪辑</span><span>传播路径</span><span>原始对照</span></div>
+            <div class="c-meta"><span>热度 <b>5320</b></span><span>更新 13 天前</span></div>
+          </article>
+        </div>
+        <p class="nores" id="nores">没有匹配的爆料条目，换个关键词试试，例如「直播」「时间线」「完结」。</p>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="section" id="latest">
+        <div class="sec-head"><h2>最新更新<small>近期补充与新增条目</small></h2></div>
+        <div class="card">
+          <ul class="list-up">
+            <li><span class="time">今天</span><span class="nm">职场群聊截图事件时间线</span><span class="ds">补充了当事人第二份说明与时间点修正</span></li>
+            <li><span class="time">今天</span><span class="nm">预售商品延期发货追踪</span><span class="ds">新增第三批订单的发货区间与客服回复</span></li>
+            <li><span class="time">昨天</span><span class="nm">某综艺剪辑争议始末</span><span class="ds">加入节目组最新一期片尾说明的原文摘录</span></li>
+            <li><span class="time">昨天</span><span class="nm">校园活动评选争议记录</span><span class="ds">整理出规则说明的第三种解释版本</span></li>
+            <li><span class="time">2 天前</span><span class="nm">带货直播间话术翻车合集</span><span class="ds">补入商品页历史版本快照的对照结果</span></li>
+            <li><span class="time">3 天前</span><span class="nm">品牌道歉声明对比盘点</span><span class="ds">新增一份同类声明，对比表扩到五份</span></li>
+            <li><span class="time">4 天前</span><span class="nm">剧集番位争议完整梳理</span><span class="ds">核对片尾字幕版本差异并标注改动处</span></li>
+            <li><span class="time">5 天前</span><span class="nm">旧采访被翻出的三条线索</span><span class="ds">补充第三段采访的完整上下文</span></li>
+            <li><span class="time">6 天前</span><span class="nm">赛后采访口误传播路径</span><span class="ds">加入第四个传播版本的发布时间</span></li>
+            <li><span class="time">7 天前</span><span class="nm">吃瓜精选第 12 期</span><span class="ds">本期收录 6 条轻量条目，均可在十分钟内读完</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="section" id="cats">
+        <div class="sec-head"><h2>分类入口<small>按爆料类型定位条目</small></h2></div>
+        <div class="cats">
+          <a class="cat" href="/#hot"><b>娱乐圈爆料</b><span>番位、剪辑、旧闻考古</span></a>
+          <a class="cat" href="/#hot"><b>网红翻车</b><span>直播切片、话术对比</span></a>
+          <a class="cat" href="/#hot"><b>职场争议</b><span>群聊截图、时间线</span></a>
+          <a class="cat" href="/#hot"><b>品牌公关</b><span>声明措辞、后续动作</span></a>
+          <a class="cat" href="/#hot"><b>消费维权</b><span>发货延期、规则条款</span></a>
+          <a class="cat" href="/#hot"><b>校园事件</b><span>评选争议、投票记录</span></a>
+          <a class="cat" href="/#hot"><b>体育采访</b><span>口误传播、剪辑对照</span></a>
+          <a class="cat" href="/#hot"><b>完结合集</b><span>已收尾、不再补充</span></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="section" id="deep">
+        <div class="sec-head"><h2>深度解析<small>爆料频道怎么挑、合集怎么看</small></h2></div>
+        <div class="article">
+          <h3>一、爆料内容的两条整理路线</h3>
+          <p>同样是整理网络热点，站点之间的差别主要在路线选择上。一条路线是「快」，事件刚起来就发一条短内容，靠更新频率留住读者；另一条路线是「全」，等事情基本收尾后再做成完整合集，读者一次读完不用追。两条路线没有高下，但适合的读者不同。</p>
+          <p>偏好快速的读者通常每天会刷好几次，希望第一时间知道发生了什么，对信息是否完整不太在意，后续有反转再补看也行。偏好完整的读者更在意来龙去脉，愿意等几天，但要求条目里的截图、回应、时间点能对得上。站内把这两类需求分开标注，连载中的条目会明确写出还缺哪一方说法。</p>
+          <ul>
+            <li>连载中：已有关键节点，但至少一方未回应，或结果尚未落地。</li>
+            <li>已完结：主要当事方均已回应，时间线可闭合，不再追加。</li>
+            <li>待补充：事件方向明确，但核心证据仍不完整，只做初步归档。</li>
+          </ul>
+
+          <h3>二、热门爆料合集与吃瓜精选的区别</h3>
+          <p>热门爆料合集偏向单事件深挖，一条目对应一件事，篇幅较长，适合坐下来慢慢看。吃瓜精选偏向多事件拼盘，每期六到八条，每条只给一句话看点和一个链接，适合碎片时间。两者不是替代关系，很多读者会先用精选扫一遍，再挑感兴趣的进合集。</p>
+          <p>从内容消费的角度看，精选解决的是「今天有什么值得看」，合集解决的是「这件事到底怎么回事」。如果时间有限，先看精选再做取舍，比直接点进长合集更省时间。反过来，如果已经知道某件事，直接搜条目名比翻精选更快。</p>
+          <div class="compare">
+            <div class="cmp"><b>合集型</b><p>单事件、篇幅长、含时间线与多方回应，适合完整了解。</p></div>
+            <div class="cmp"><b>精选型</b><p>多事件、每条短、按阅读时长控制，适合碎片时间。</p></div>
+            <div class="cmp"><b>考古型</b><p>旧内容新解读，重点在语境对照，适合已了解背景的读者。</p></div>
+          </div>
+
+          <h3>三、追更爆料时值得留意的几个信号</h3>
+          <p>追一件事的后续，比读完整理更费精力。比较省力的做法是盯几个关键信号：当事方是否发布正式说明、平台是否对相关内容做处理、原始素材是否出现新版本。这三个信号出现任意一个，事件通常会有新进展，值得回看条目。</p>
+          <p>另一类容易被忽略的信号是「沉默」。如果一方长时间不回应，而传播范围仍在扩大，往往意味着后续会有集中回应，或者事件会转向其他方向。站内的「待补充」标记多数就是这种情况，提示读者这条还没结束。</p>
+          <div class="note">阅读时建议先看条目末尾的更新时间，再看正文。更新时间早于事件最新进展的条目，结论部分可能已经过时。</div>
+
+          <h3>四、不同站点的取舍：快与全怎么选</h3>
+          <p>如果只是想跟上话题，选更新频率高的站点，代价是信息碎片化，需要自己拼接。如果想一次弄明白，选整理型站点，代价是慢，热点过去后才看得到完整版。两者可以并用：先用快站知道发生了什么，再用整理站补全过程。</p>
+          <p>判断一个整理型站点是否可靠，看三点：是否标注更新时间、是否区分「已证实」与「网传」、是否给出原始素材位置。三点都做到，即使结论有偏差，读者也能自己核对。三点都缺，读起来轻松但容易被动接受别人的判断。</p>
+          <p>黑料大赛吃瓜网在整理时尽量保留原始截图的位置描述与发布时间，对无法核实的说法单独标注。这样做会让条目读起来没那么顺，但能减少误读。对只想快速吃瓜的读者，这类标注可能显得啰嗦，可以直接跳到条目末尾看结论段。</p>
+
+          <h3>五、阅读爆料的边界感</h3>
+          <p>爆料内容涉及具体的人，阅读时容易带入情绪。比较稳妥的做法是把「事实」「说法」「推测」分开看：有原始素材支撑的是事实，当事方的表述是说法，其余是推测。三者混在一起时，结论往往站不住。</p>
+          <p>另外，旧内容被重新翻出时，语境变化常被忽略。同一句话在不同年份、不同场合说，含义可能完全不同。考古类条目会尽量补上原始语境，读者也可以先看这部分再判断，避免把旧话当成新料。</p>
+        </div>
+      </section>
+
+      <!-- 6 浏览指南 -->
+      <section class="section" id="guide">
+        <div class="sec-head"><h2>浏览指南<small>从进入到读完的几条路径</small></h2></div>
+        <div class="steps">
+          <div class="step"><div><b>先定场景再看内容</b><span>通勤、午休选吃瓜精选；有整块时间再进热门合集，避免开长文却读不完。</span></div></div>
+          <div class="step"><div><b>用分类缩小范围</b><span>分类入口按事件类型划分，点进去只保留同类条目，比逐条翻更省时间。</span></div></div>
+          <div class="step"><div><b>看更新状态再决定追不追</b><span>「连载中」适合追更，「已完结」适合一次读完，避免读到一半发现没后续。</span></div></div>
+          <div class="step"><div><b>用站内搜索定位已知事件</b><span>输入条目名或类型词，结果会高亮匹配卡片，没有结果时会给出提示。</span></div></div>
+          <div class="step"><div><b>从条目跳到相邻方向</b><span>每张卡片下方的标签可以当作方向索引，找到同类型但不同事件的条目。</span></div></div>
+        </div>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="section faq" id="faq">
+        <div class="sec-head"><h2>常见问答<small>读者最常问的六个问题</small></h2></div>
+        <details>
+          <summary>黑料大赛吃瓜网主要整理哪类爆料？</summary>
+          <div class="ans">以网络公开传播的争议事件为主，包括综艺剪辑争议、直播话术翻车、职场群聊截图、品牌公关声明、消费发货纠纷等方向。每条目尽量保留原始素材的位置描述与发布时间，方便自行核对。</div>
+        </details>
+        <details>
+          <summary>热门爆料合集一般多久更新一次？</summary>
+          <div class="ans">连载中的条目通常在新回应出现后一到两天内补充，完结条目不再改动。吃瓜精选按周更新，每期收录六到八条轻量内容。具体节奏会随事件热度变化，条目末尾的更新时间是最直接的参考。</div>
+        </details>
+        <details>
+          <summary>吃瓜精选和完整合集哪个更适合通勤看？</summary>
+          <div class="ans">通勤场景更适合吃瓜精选，每条控制在一两分钟内读完，可以随时停下。完整合集篇幅长，适合有整块时间时读，中途打断后需要回看时间线才能接上。</div>
+        </details>
+        <details>
+          <summary>怎么判断一条爆料是否已经完结？</summary>
+          <div class="ans">看卡片上的状态标记。「已完结」表示主要当事方均已回应、时间线可闭合；「连载中」表示仍有未回应的一方或结果未落地；「待补充」表示方向明确但核心证据不完整。三种状态在条目正文开头也会重复标注。</div>
+        </details>
+        <details>
+          <summary>追更爆料时，哪些信号说明事件会有新进展？</summary>
+          <div class="ans">常见的有三类：当事方发布正式说明、平台对相关内容做出处理、原始素材出现新版本。另外，一方长时间沉默而传播仍在扩大，也往往意味着后续会有集中回应。出现任意一个信号，建议回看条目末尾的更新时间。</div>
+        </details>
+        <details>
+          <summary>站内搜索能搜到什么，搜不到怎么办？</summary>
+          <div class="ans">可以搜条目名、事件类型词或标签词，例如「直播」「时间线」「完结」。搜索只覆盖当前页面展示的条目，没有结果时会提示换关键词。搜不到时可以先从分类入口按类型找，或直接浏览最新更新列表。</div>
+        </details>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="section" id="cmts">
+        <div class="sec-head"><h2>读者评论<small>来自不同阅读场景的反馈</small></h2></div>
+        <div class="cmts">
+          <div class="cmt"><div class="who"><span class="avatar">林</span><b>林间小路</b><i>2 小时前</i></div><p>通勤路上看精选刚好，一条一两分钟，不会坐过站。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">周</span><b>周末不加班</b><i>4 小时前</i></div><p>时间线做得清楚，比在几个平台来回翻省事多了。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">陈</span><b>陈皮话梅</b><i>6 小时前</i></div><p>有的条目结论下得有点快，建议多标一下哪些是网传。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">许</span><b>许多鱼</b><i>8 小时前</i></div><p>考古类那几条挺有意思，旧采访补上语境后确实不一样。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">何</span><b>何同学在忙</b><i>10 小时前</i></div><p>分类入口好用，按类型点进去基本不会串味。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">吴</span><b>吴聊青年</b><i>12 小时前</i></div><p>希望连载中的条目能标一下大概什么时候会有结果。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">郑</span><b>郑在追更</b><i>14 小时前</i></div><p>追更提醒挺实用，不用每天自己刷有没有更新。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">孙</span><b>孙小满</b><i>16 小时前</i></div><p>品牌道歉那份对比表做得好，措辞差别一看就明白。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">马</span><b>马路边边</b><i>18 小时前</i></div><p>手机上看排版还行，就是有些条目太长，得往下滑很久。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">朱</span><b>朱古力</b><i>20 小时前</i></div><p>精选和合集分开这点不错，赶时间就看精选。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">胡</span><b>胡思乱想</b><i>22 小时前</i></div><p>有些事件我完全没听过，看完时间线也能跟上。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">高</span><b>高高兴兴</b><i>1 天前</i></div><p>完结标记很关键，省得读到一半发现没后续。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">罗</span><b>罗宋汤</b><i>1 天前</i></div><p>整体节奏还行，就是有几条重复内容，可以合并一下。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">梁</span><b>梁上君子</b><i>1 天前</i></div><p>看爆料还是得自己判断，站点标注能帮上忙但不能全信。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">宋</span><b>宋你一朵花</b><i>2 天前</i></div><p>搜索挺好用，输入「直播」直接出来三条相关的。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">唐</span><b>唐突了</b><i>2 天前</i></div><p>睡前看精选刚好，看完就睡，不会越看越精神。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">韩</span><b>韩式半永久</b><i>2 天前</i></div><p>希望多一些消费维权类的整理，这块实用。</p></div>
+          <div class="cmt"><div class="who"><span class="avatar">冯</span><b>冯虚御风</b><i>3 天前</i></div><p>深度解析那篇讲快和全的差别，看完知道该去哪类站点了。</p></div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="section" id="news">
+        <div class="sec-head"><h2>相关资讯<small>与爆料整理相关的行业动态</small></h2></div>
+        <div class="card">
+          <ul class="news">
+            <li>
+              <div class="nh"><b>多家平台加强争议内容标注要求</b><time>2025-03-18</time></div>
+              <p>要求对涉及具体人物的争议内容标注信息来源与时间，减少旧内容被当作新料传播。</p>
+            </li>
+            <li>
+              <div class="nh"><b>直播切片版权争议出现新判例</b><time>2025-03-11</time></div>
+              <p>判决明确了二次剪辑的合理使用边界，对以切片为主的爆料整理影响较大。</p>
+            </li>
+            <li>
+              <div class="nh"><b>品牌声明类内容阅读量上升</b><time>2025-03-04</time></div>
+              <p>读者对声明措辞与后续动作的对照兴趣增加，单纯转发声明的形式吸引力下降。</p>
+            </li>
+            <li>
+              <div class="nh"><b>短内容合集成为通勤阅读主要形式</b><time>2025-02-25</time></div>
+              <p>按阅读时长分层的精选形式更适配碎片时间，长合集转向周末与晚间时段。</p>
+            </li>
+            <li>
+              <div class="nh"><b>旧闻考古类内容需求持续增长</b><time>2025-02-17</time></div>
+              <p>读者更关注语境变化与原始出处，单纯截取旧片段的形式反馈转差。</p>
+            </li>
+            <li>
+              <div class="nh"><b>争议事件时间线工具使用率提高</b><time>2025-02-08</time></div>
+              <p>整理型内容开始普遍附带时间线，帮助读者在中途进入时快速补齐背景。</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="section" id="reco">
+        <div class="sec-head"><h2>方向推荐<small>按可搜索的内容方向继续找</small></h2></div>
+        <div class="reco">
+          <a href="/#hot">综艺剪辑争议合集</a>
+          <a href="/#hot">直播话术翻车整理</a>
+          <a href="/#hot">职场群聊截图时间线</a>
+          <a href="/#hot">品牌道歉声明对比</a>
+          <a href="/#hot">消费发货延期追踪</a>
+          <a href="/#hot">旧采访语境对照</a>
+          <a href="/#latest">完结爆料一次读完</a>
+          <a href="/#deep">爆料频道快与全对比</a>
+        </div>
+      </section>
+
+      <!-- 11 趋势观察 -->
+      <section class="section" id="trend">
+        <div class="sec-head"><h2>趋势观察<small>爆料内容消费的三个变化</small></h2></div>
+        <div class="article">
+          <h3>从抢首发到等收尾</h3>
+          <p>早期读者习惯追第一条消息，现在更多人愿意等两三天再看整理版。原因是反转频率变高，先发的内容常常需要推翻重写。整理型内容的优势在于把反转本身也纳入时间线，读者看到的是一条完整曲线，而不是几个孤立的点。</p>
+          <h3>阅读时长成为分类标准</h3>
+          <p>按类型分类之外，按阅读时长分类越来越常见。同样是对综艺争议感兴趣，通勤时只想看两分钟版本，周末才愿意读完整梳理。站内把精选与合集分开，本质上就是按可投入时间分层，让读者先选时长再选内容。</p>
+          <h3>标注意识在增强</h3>
+          <p>读者对「已证实」与「网传」的区分要求变高，评论区经常能看到对来源的追问。这推动整理型内容在条目里直接标出证据类型，而不是在末尾笼统写一句「以官方为准」。标注变多会让阅读稍慢，但减少了误判。</p>
+        </div>
+      </section>
+
+      <!-- 12 精选片段 -->
+      <section class="section" id="pick">
+        <div class="sec-head"><h2>本期精选片段<small>来自编辑整理的三段摘录</small></h2></div>
+        <div class="quote">
+          <p>「把四份道歉声明按发布时间排开，会发现措辞变化和后续动作并不完全同步：有的声明写得更诚恳，但实际处理反而更慢。」</p>
+          <div class="by">—— 品牌道歉声明对比盘点 · 结论段</div>
+        </div>
+        <div class="quote" style="margin-top:12px">
+          <p>「同一段采访被截成四个版本传播，每个版本的剪辑点都不同，但只要对照原始视频的时间码，就能看出哪一版删掉了前置语境。」</p>
+          <div class="by">—— 赛后采访口误传播路径 · 考证部分</div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 右栏 -->
+    <aside class="right-col" aria-label="辅助阅读">
+      <div class="card side">
+        <div class="side-title">页内目录</div>
+        <nav class="toc" aria-label="右栏目录">
+          <a href="/#intro">内容简介</a>
+          <a href="/#hot">热门内容推荐</a>
+          <a href="/#latest">最新更新</a>
+          <a href="/#cats">分类入口</a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">浏览指南</a>
+          <a href="/#faq">常见问答</a>
+          <a href="/#cmts">读者评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#trend">趋势观察</a>
+        </nav>
+      </div>
+
+      <div class="card side">
+        <div class="side-title">热门条目</div>
+        <ul class="rank">
+          <li><span class="no">1</span><span class="tx">某综艺剪辑争议始末</span><span class="hm">9821</span></li>
+          <li><span class="no">2</span><span class="tx">带货直播间话术翻车合集</span><span class="hm">9104</span></li>
+          <li><span class="no">3</span><span class="tx">职场群聊截图事件时间线</span><span class="hm">8760</span></li>
+          <li><span class="no">4</span><span class="tx">品牌道歉声明对比盘点</span><span class="hm">8032</span></li>
+          <li><span class="no">5</span><span class="tx">旧采访被翻出的三条线索</span><span class="hm">7455</span></li>
+          <li><span class="no">6</span><span class="tx">预售商品延期发货追踪</span><span class="hm">6918</span></li>
+        </ul>
+      </div>
+
+      <div class="card side">
+        <div class="side-title">延伸阅读</div>
+        <nav class="toc" aria-label="延伸阅读">
+          <a href="/#deep">连载中与已完结怎么区分</a>
+          <a href="/#deep">快站与整理站的取舍</a>
+          <a href="/#guide">通勤场景怎么选条目</a>
+          <a href="/#faq">追更时看哪些信号</a>
+          <a href="/#trend">阅读时长成为分类标准</a>
+        </nav>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="15" fill="#1c222d"/>
+            <circle cx="26" cy="29" r="10" fill="#ff7a45"/>
+            <circle cx="45" cy="23" r="5" fill="#ffd166"/>
+            <path d="M13 48c9-9 29-9 38 0" stroke="#ff7a45" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-name">黑料大赛吃瓜网</span>
+        </div>
+        <p>以网络热点爆料整理为主的内容站，按事件类型与阅读场景归档，提供时间线、声明对比与追更状态标注，帮读者在碎片时间里挑到想看的条目。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容频道</h4>
+        <a href="/#hot">热门合集</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#cats">分类入口</a>
+        <a href="/#trend">趋势观察</a>
+      </div>
+      <div class="foot-col">
+        <h4>阅读帮助</h4>
+        <a href="/#intro">内容简介</a>
+        <a href="/#guide">浏览指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#reco">方向推荐</a>
+      </div>
+      <div class="foot-col">
+        <h4>互动与资讯</h4>
+        <a href="/#cmts">读者评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#pick">精选片段</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2025 黑料大赛吃瓜网 · 内容整理示例站</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q=document.getElementById('q'),
+      btn=document.getElementById('qbtn'),
+      grid=document.getElementById('hotGrid'),
+      nores=document.getElementById('nores'),
+      cards=Array.prototype.slice.call(grid.querySelectorAll('.c-card')),
+      menuBtn=document.getElementById('menuBtn');
+
+  function runSearch(){
+    var kw=(q.value||'').trim().toLowerCase();
+    if(!kw){cards.forEach(function(c){c.style.display='';});nores.style.display='none';return;}
+    var hit=0;
+    cards.forEach(function(c){
+      var t=c.textContent.toLowerCase();
+      if(t.indexOf(kw)>-1){c.style.display='';hit++;}
+      else{c.style.display='none';}
+    });
+    nores.style.display=hit?'none':'block';
+  }
+  btn.addEventListener('click',runSearch);
+  q.addEventListener('input',runSearch);
+  q.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();runSearch();}});
+
+  if(menuBtn){
+    menuBtn.addEventListener('click',function(){
+      var open=menuBtn.getAttribute('aria-expanded')==='true';
+      menuBtn.setAttribute('aria-expanded',open?'false':'true');
+      var target=document.getElementById('mobileNav');
+      if(target){target.scrollIntoView({block:'nearest'});}
+    });
+  }
+})();
+</script>
+</body>
+                                                                  </html>
