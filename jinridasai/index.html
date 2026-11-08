@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日大赛每日大赛吃瓜-赛事看点_选手花絮_实时讨论</title>
+  <meta name="description" content="今日大赛每日大赛吃瓜，这里聚合每日大赛的赛程看点、选手花絮、现场讨论与实时动态。适合关注大赛进程、想快速了解赛事亮点与幕后话题的观众浏览。">
+  <meta name="keywords" content="每日大赛赛程,大赛看点,选手花絮,赛事讨论,实时动态">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1e2b'/%3E%3Cpath d='M18 22h28v6H18zm0 12h18v6H18zm24 0h4v6h-4z' fill='%23ffb347'/%3E%3Ccircle cx='44' cy='48' r='6' fill='%23f25f5c'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#0f1118;
+      --panel:#1a1e2b;
+      --panel-2:#222738;
+      --ink:#eef0f7;
+      --muted:#9aa1b5;
+      --line:#2f3547;
+      --brand:#ffb347;
+      --brand-2:#f25f5c;
+      --accent:#6dd3ce;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --font: "PingFang SC","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    }
+    html{scroll-behavior:smooth;scroll-padding-top:128px}
+    body{
+      font-family:var(--font);
+      background:radial-gradient(1200px 600px at 80% -10%,#2a2033 0%,transparent 60%),var(--bg);
+      color:var(--ink);line-height:1.65;font-size:15px;
+    }
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    img,svg{display:block;max-width:100%}
+    .container{max-width:1360px;margin:0 auto;padding:0 22px}
+
+    /* 吸顶公告条 */
+    .announce{
+      position:sticky;top:0;z-index:100;
+      background:linear-gradient(90deg,#241f36,#1b2230);
+      border-bottom:1px solid var(--line);
+      font-size:13px;color:#cfd4e6;
+    }
+    .announce .container{display:flex;align-items:center;gap:12px;min-height:38px;flex-wrap:wrap}
+    .announce .dot{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 10px var(--brand)}
+    .announce strong{color:var(--brand)}
+    .announce a{color:var(--accent);border-bottom:1px dashed var(--accent)}
+
+    /* 吸顶页头 */
+    .site-header{
+      position:sticky;top:38px;z-index:99;
+      background:rgba(15,17,24,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{display:flex;align-items:center;gap:18px;min-height:66px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.5px}
+    .brand svg{width:38px;height:38px;flex:0 0 auto}
+    .brand .logo-text{color:var(--brand);white-space:nowrap}
+    .top-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+    .top-nav a{
+      padding:7px 13px;border-radius:999px;font-size:14px;color:#cfd4e6;
+      border:1px solid transparent;transition:.2s;
+    }
+    .top-nav a:hover,.top-nav a:focus-visible{background:var(--panel-2);border-color:var(--line);color:var(--brand)}
+    .search-box{margin-left:6px;display:flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 14px}
+    .search-box input{
+      background:transparent;border:none;outline:none;color:var(--ink);font-size:13px;width:130px;font-family:var(--font)
+    }
+    .search-box input::placeholder{color:#6c7387}
+    .search-box button{
+      background:var(--brand);border:none;color:#1a1e2b;font-weight:700;font-size:12px;
+      border-radius:999px;padding:6px 12px;cursor:pointer;font-family:var(--font);
+    }
+    .search-box button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+    /* 首屏 */
+    .hero{padding:36px 0 26px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(255,179,71,.06),transparent 70%)}
+    .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:30px;align-items:center}
+    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.2;letter-spacing:1px;margin-bottom:14px;color:#fff}
+    .hero .lead{color:#c6ccdf;font-size:16px;max-width:640px;margin-bottom:18px}
+    .hero .lead b{color:var(--brand);font-weight:700}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+    .hero-tags span{font-size:12px;padding:5px 12px;border-radius:999px;background:var(--panel-2);border:1px solid var(--line);color:#dfe4f2}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{
+      display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:999px;
+      font-weight:700;font-size:14px;border:1px solid transparent;cursor:pointer;font-family:var(--font);
+    }
+    .btn-primary{background:var(--brand);color:#1a1e2b}
+    .btn-primary:hover{background:#ffc56b}
+    .btn-ghost{background:transparent;border-color:var(--line);color:#dfe4f2}
+    .btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+    .hero-visual{
+      position:relative;background:var(--panel);border:1px solid var(--line);border-radius:22px;
+      padding:18px;box-shadow:var(--shadow);overflow:hidden;
+    }
+    .hero-visual svg{width:100%;height:auto}
+    .hero-visual .badge{
+      position:absolute;top:14px;right:14px;background:var(--brand-2);color:#fff;font-size:11px;font-weight:700;
+      padding:4px 10px;border-radius:999px;
+    }
+
+    /* 三栏布局 */
+    .main-layout{display:grid;grid-template-columns:178px minmax(0,1fr) 244px;gap:26px;padding:30px 0 50px}
+    .col-left,.col-right{position:sticky;top:118px;align-self:start;max-height:calc(100vh - 130px);overflow:auto;padding-right:2px}
+    .col-left::-webkit-scrollbar,.col-right::-webkit-scrollbar{width:5px}
+    .col-left::-webkit-scrollbar-thumb,.col-right::-webkit-scrollbar-thumb{background:var(--line);border-radius:999px}
+
+    .side-title{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:12px}
+    .channel-list li{margin-bottom:4px}
+    .channel-list a{
+      display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;font-size:13.5px;color:#cfd4e6;
+      border:1px solid transparent;transition:.18s;
+    }
+    .channel-list a:hover,.channel-list a:focus-visible{background:var(--panel);border-color:var(--line);color:var(--brand)}
+    .channel-list .num{font-size:11px;color:var(--muted);min-width:16px}
+
+    .toc-list a{display:block;padding:6px 0 6px 12px;border-left:2px solid var(--line);font-size:13px;color:#b9c0d4;transition:.18s}
+    .toc-list a:hover,.toc-list a:focus-visible{color:var(--brand);border-left-color:var(--brand)}
+    .hot-list li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:13px}
+    .hot-list li:last-child{border-bottom:none}
+    .hot-list .rank{display:inline-block;width:20px;color:var(--brand);font-weight:800;font-size:12px}
+    .hot-list a{color:#dfe4f2}
+    .hot-list a:hover{color:var(--brand)}
+
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:24px}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:16px}
+    .section-head h2{font-size:20px;letter-spacing:.5px;color:#fff}
+    .section-head h2 small{display:block;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:4px}
+    .section-head .more{font-size:12px;color:var(--accent);white-space:nowrap}
+    .section-head .more:hover{text-decoration:underline}
+
+    /* 内容简介 */
+    .intro p{margin-bottom:12px;color:#c9cfdf;font-size:14.5px}
+    .intro p:last-child{margin-bottom:0}
+
+    /* 热门卡片 */
+    .card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .content-card{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:16px;transition:.2s;display:flex;flex-direction:column;gap:8px}
+    .content-card:hover{border-color:var(--brand);transform:translateY(-2px)}
+    .content-card h3{font-size:15px;color:#fff;line-height:1.4}
+    .content-card .tags{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{font-size:11px;padding:2px 9px;border-radius:999px;background:#2c3247;color:#b9c5e8;border:1px solid #3a4160}
+    .tag.hot{background:rgba(242,95,92,.16);color:#ff9d9b;border-color:rgba(242,95,92,.35)}
+    .content-card .desc{font-size:12.5px;color:#aab2c9;line-height:1.55;flex:1}
+    .content-card .meta{display:flex;justify-content:space-between;font-size:11px;color:#7c849a;border-top:1px dashed var(--line);padding-top:8px}
+    .content-card .meta b{color:var(--brand);font-weight:700}
+
+    /* 最新更新列表 */
+    .update-list li{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+    .update-list li:last-child{border-bottom:none}
+    .update-list .time{color:var(--muted);font-size:12px;white-space:nowrap;min-width:76px}
+    .update-list .name{color:#eef0f7;font-weight:600}
+    .update-list .brief{color:#9aa1b5;font-size:12.5px}
+
+    /* 分类 */
+    .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .cat-item{
+      background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:12px 10px;text-align:center;
+      font-size:13px;color:#dfe4f2;transition:.18s;
+    }
+    .cat-item:hover,.cat-item:focus-visible{border-color:var(--brand);color:var(--brand)}
+    .cat-item span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+
+    /* 深度正文 */
+    .deep h3{font-size:17px;color:var(--brand);margin:22px 0 8px;letter-spacing:.3px}
+    .deep h3:first-of-type{margin-top:0}
+    .deep p{color:#c6ccdf;font-size:14.5px;margin-bottom:10px}
+    .deep ul{margin:8px 0 12px 18px;list-style:disc}
+    .deep li{color:#c6ccdf;font-size:14px;margin-bottom:6px}
+    .deep .kw{color:var(--brand);font-weight:700}
+
+    /* 指南 */
+    .guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .guide-item{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:14px}
+    .guide-item h3{font-size:14px;color:#fff;margin-bottom:6px}
+    .guide-item p{font-size:12.5px;color:#aab2c9}
+
+    /* FAQ */
+    details{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+    summary{cursor:pointer;padding:13px 16px;font-size:14px;font-weight:600;color:#eef0f7;list-style:none;display:flex;justify-content:space-between;gap:10px}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";color:var(--brand);font-size:18px;line-height:1}
+    details[open] summary::after{content:"–"}
+    details .answer{padding:0 16px 14px;font-size:13.5px;color:#aab2c9}
+
+    /* 评论 */
+    .comment-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .comment{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13px;color:#b9c0d4}
+    .comment .who{display:flex;justify-content:space-between;margin-bottom:5px;font-size:12px}
+    .comment .who b{color:var(--brand)}
+    .comment .who span{color:#6c7387}
+
+    /* 资讯 */
+    .news-list li{padding:12px 0;border-bottom:1px dashed var(--line)}
+    .news-list li:last-child{border-bottom:none}
+    .news-list .title{font-size:14px;font-weight:600;color:#eef0f7;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+    .news-list .date{font-size:11px;color:var(--muted);font-weight:400}
+    .news-list .sum{font-size:12.5px;color:#9aa1b5;margin-top:4px}
+
+    /* 相关推荐标签 */
+    .rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+    .rec-tags a{font-size:12.5px;padding:7px 14px;border-radius:999px;background:var(--panel-2);border:1px solid var(--line);color:#cfd4e6}
+    .rec-tags a:hover,.rec-tags a:focus-visible{border-color:var(--brand);color:var(--brand)}
+
+    /* 趋势观察 */
+    .trend{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .trend-item{background:var(--panel-2);border-left:3px solid var(--brand-2);border-radius:10px;padding:14px}
+    .trend-item h3{font-size:14px;color:#fff;margin-bottom:5px}
+    .trend-item p{font-size:12.5px;color:#aab2c9}
+
+    /* 页尾 */
+    .site-footer{border-top:1px solid var(--line);background:#0b0d13;padding:34px 0 22px;color:#9aa1b5;font-size:13px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px;margin-bottom:22px}
+    .footer-brand b{color:var(--brand);font-size:16px;display:block;margin-bottom:6px}
+    .footer-col h3{font-size:12px;letter-spacing:1.5px;color:#cfd4e6;margin-bottom:10px;text-transform:uppercase}
+    .footer-col a{display:block;padding:3px 0;color:#9aa1b5;font-size:12.5px}
+    .footer-col a:hover{color:var(--brand)}
+    .footer-bottom{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11.5px;color:#6c7387}
+
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    .no-result{font-size:13px;color:var(--brand-2);padding:10px 0;display:none}
+
+    /* 响应式 */
+    @media (max-width:1024px){
+      .main-layout{grid-template-columns:160px minmax(0,1fr)}
+      .col-right{display:none}
+      .hero-grid{grid-template-columns:1fr}
+      .card-grid{grid-template-columns:1fr}
+      .cat-grid{grid-template-columns:repeat(2,1fr)}
+      .comment-list{grid-template-columns:1fr}
+      .trend{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:760px){
+      .header-inner{gap:10px}
+      .top-nav{order:3;width:100%;justify-content:flex-start;margin-left:0;padding-bottom:6px}
+      .search-box{margin-left:auto}
+      .main-layout{grid-template-columns:1fr;padding-top:18px}
+      .col-left{position:static;max-height:none;margin-bottom:6px}
+      .channel-list{display:flex;flex-wrap:wrap;gap:4px}
+      .channel-list li{margin:0}
+      .channel-list a{padding:6px 10px;background:var(--panel);border:1px solid var(--line);font-size:12.5px}
+      .guide-grid{grid-template-columns:1fr}
+      .cat-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr}
+      html{scroll-padding-top:150px}
+    }
+    @media (max-width:400px){
+      .container{padding:0 14px}
+      .brand{font-size:15px}
+      .hero h1{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce" role="region" aria-label="站内公告">
+  <div class="container">
+    <span class="dot" aria-hidden="true"></span>
+    <span><strong>今日大赛·每日大赛吃瓜</strong> 今日焦点：多场对决进入关键轮次，选手采访与后台花絮已更新。</span>
+    <a href="/#latest">查看今日更新 &rarr;</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/#hero" aria-label="返回首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1a1e2b"/>
+        <path d="M18 22h28v6H18zm0 12h18v6H18zm24 0h4v6h-4z" fill="#ffb347"/>
+        <circle cx="44" cy="48" r="6" fill="#f25f5c"/>
+        <path d="M41 48l2 2 4-4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="logo-text">今日大赛每日大赛吃瓜</span>
+    </a>
+    <nav class="top-nav" aria-label="主题导航">
+      <a href="/#intro">吃瓜速览</a>
+      <a href="/#hot">热门看点</a>
+      <a href="/#latest">每日动态</a>
+      <a href="/#categories">赛事分类</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">常见问答</a>
+    </nav>
+    <div class="search-box" role="search">
+      <label for="siteSearch" class="sr-only">站内搜索</label>
+      <input id="siteSearch" type="search" placeholder="搜看点/选手/花絮" autocomplete="off">
+      <button id="searchBtn" type="button">搜索</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>今日大赛每日大赛吃瓜</h1>
+      <p class="lead">每天跟进大赛赛程、选手状态与场外花絮。<b>吃瓜</b>不迷路：热门对决、幕后采访、实时讨论一次看全，适合想快速掌握赛事话题的观众。</p>
+      <div class="hero-tags" aria-label="热门标签">
+        <span>今日赛程</span><span>选手花絮</span><span>赛后采访</span><span>实时讨论</span><span>晋级形势</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#hot">看今日热门看点</a>
+        <a class="btn btn-ghost" href="/#latest">追踪最新动态</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <span class="badge">LIVE 示例</span>
+      <svg viewBox="0 0 420 300" role="img" aria-label="大赛现场数据面板示意图">
+        <rect x="0" y="0" width="420" height="300" rx="18" fill="#1a1e2b"/>
+        <rect x="18" y="20" width="180" height="10" rx="5" fill="#ffb347"/>
+        <rect x="18" y="40" width="120" height="8" rx="4" fill="#3a4160"/>
+        <rect x="18" y="70" width="384" height="60" rx="10" fill="#222738"/>
+        <rect x="32" y="84" width="60" height="8" rx="4" fill="#6dd3ce"/>
+        <rect x="32" y="100" width="200" height="8" rx="4" fill="#3a4160"/>
+        <rect x="290" y="84" width="90" height="8" rx="4" fill="#f25f5c"/>
+        <rect x="18" y="146" width="184" height="60" rx="10" fill="#222738"/>
+        <rect x="32" y="160" width="80" height="8" rx="4" fill="#ffb347"/>
+        <rect x="32" y="176" width="140" height="8" rx="4" fill="#3a4160"/>
+        <rect x="218" y="146" width="184" height="60" rx="10" fill="#222738"/>
+        <rect x="232" y="160" width="60" height="8" rx="4" fill="#6dd3ce"/>
+        <rect x="232" y="176" width="120" height="8" rx="4" fill="#3a4160"/>
+        <rect x="18" y="222" width="384" height="56" rx="10" fill="#222738"/>
+        <circle cx="46" cy="250" r="12" fill="#f25f5c"/>
+        <rect x="70" y="240" width="150" height="8" rx="4" fill="#3a4160"/>
+        <rect x="70" y="256" width="100" height="8" rx="4" fill="#2f3547"/>
+        <rect x="300" y="238" width="80" height="24" rx="12" fill="#ffb347"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 三栏主内容 -->
+<main class="container main-layout">
+
+  <!-- 左栏：频道导航 -->
+  <aside class="col-left" aria-label="频道导航">
+    <div class="side-title">频道导航</div>
+    <ul class="channel-list">
+      <li><a href="/#intro"><span class="num">01</span>吃瓜速览</a></li>
+      <li><a href="/#hot"><span class="num">02</span>热门看点</a></li>
+      <li><a href="/#latest"><span class="num">03</span>每日动态</a></li>
+      <li><a href="/#categories"><span class="num">04</span>赛事分类</a></li>
+      <li><a href="/#deep"><span class="num">05</span>深度解析</a></li>
+      <li><a href="/#guide"><span class="num">06</span>体验指南</a></li>
+      <li><a href="/#faq"><span class="num">07</span>常见问答</a></li>
+      <li><a href="/#comments"><span class="num">08</span>观众评论</a></li>
+      <li><a href="/#news"><span class="num">09</span>赛事资讯</a></li>
+      <li><a href="/#rec"><span class="num">10</span>相关推荐</a></li>
+      <li><a href="/#trend"><span class="num">11</span>趋势观察</a></li>
+      <li><a href="/#picks"><span class="num">12</span>编辑精选</a></li>
+    </ul>
+  </aside>
+
+  <!-- 中栏：正文 -->
+  <div class="col-main">
+
+    <!-- 1. 内容简介 -->
+    <section class="card intro" id="intro">
+      <div class="section-head">
+        <h2>吃瓜速览：今天大赛有什么值得看<small>围绕今日赛程、选手状态与场外话题的导读</small></h2>
+      </div>
+      <p><strong>今日大赛每日大赛吃瓜</strong>这里聚合每天大赛的看点、选手花絮、赛后声音与实时讨论。页面按赛程推进整理内容，方便你在碎片时间里快速了解今天比了什么、谁的表现出圈、场外又有什么新话题。无论你是追完整赛程的老观众，还是只想看精彩片段的吃瓜路人，都能按分类找到对应的入口。</p>
+      <p>内容方向覆盖赛事看点、选手花絮、赛后采访、晋级形势和实时讨论。比如“今日大赛赛程”适合提前安排观看时间，“选手花絮”适合补看后台互动，“赛后采访”则帮你快速抓住关键发言。遇到多场比赛同时进行，不妨先看热门看点，再按分类进入具体条目。</p>
+      <p>每日大赛的节奏通常较紧凑，页面会在关键轮次前后更新对应内容。吃瓜不必从头看到尾，围绕自己关心的选手或对阵方向浏览即可。想比较不同场次的热度，可以留意卡片上的讨论指数与更新提示。</p>
+    </section>
+
+    <!-- 2. 热门内容推荐 -->
+    <section class="card" id="hot">
+      <div class="section-head">
+        <h2>热门看点：今日大赛高讨论条目<small>8 条示例内容，按讨论热度整理</small></h2>
+        <a class="more" href="/#latest">更多动态 &rarr;</a>
+      </div>
+      <div class="card-grid">
+        <article class="content-card">
+          <h3>A 组焦点战：蓝队逆风翻盘进入决胜局</h3>
+          <div class="tags"><span class="tag hot">今日大赛</span><span class="tag">逆风翻盘</span><span class="tag">决胜局</span></div>
+          <p class="desc">中段落后两个赛点后连续追分，决胜局阵容调整成为讨论焦点，赛后采访提到临场沟通起了作用。</p>
+          <div class="meta"><span>讨论指数 <b>98</b></span><span>2 小时前</span></div>
+        </article>
+        <article class="content-card">
+          <h3>选手“小北”赛后采访：想把状态留到下一轮</h3>
+          <div class="tags"><span class="tag">选手花絮</span><span class="tag hot">赛后采访</span><span class="tag">下一轮</span></div>
+          <p class="desc">采访中回应了关键回合的选择，并表示会针对对手节奏做调整。评论区对这次发言讨论较多。</p>
+          <div class="meta"><span>讨论指数 <b>91</b></span><span>3 小时前</span></div>
+        </article>
+        <article class="content-card">
+          <h3>今日大赛赛程一览：晚间三场对决时间整理</h3>
+          <div class="tags"><span class="tag hot">每日大赛</span><span class="tag">赛程</span><span class="tag">晚间场</span></div>
+          <p class="desc">按时间段整理今晚三场比赛，附对阵双方近期状态与观看提示，适合提前安排时间。</p>
+          <div class="meta"><span>讨论指数 <b>87</b></span><span>5 小时前</span></div>
+        </article>
+        <article class="content-card">
+          <h3>后台花絮：选手候场区互动被镜头记录</h3>
+          <div class="tags"><span class="tag">吃瓜</span><span class="tag hot">后台花絮</span><span class="tag">候场区</span></div>
+          <p class="desc">候场区的轻松互动成为今日话题之一，有观众认为这种氛围有助于缓解比赛压力。</p>
+          <div class="meta"><span>讨论指数 <b>84</b></span><span>6 小时前</span></div>
+        </article>
+        <article class="content-card">
+          <h3>晋级形势分析：B 组出线名额仍存变数</h3>
+          <div class="tags"><span class="tag">晋级形势</span><span class="tag hot">今日大赛</span><span class="tag">B 组</span></div>
+          <p class="desc">结合已赛场次与小分计算，B 组仍有多种出线可能，末轮对阵成为关键。</p>
+          <div class="meta"><span>讨论指数 <b>80</b></span><span>8 小时前</span></div>
+        </article>
+        <article class="content-card">
+          <h3>解说台观点：本轮节奏偏快，运营细节被放大</h3>
+          <div class="tags"><span class="tag">赛事讨论</span><span class="tag">解说观点</span><span class="tag hot">实时讨论</span></div>
+          <p class="desc">解说提到本轮多场比赛节奏明显加快，细节处理成为分差来源，观众讨论集中在运营选择。</p>
+          <div class="meta"><span>讨论指数 <b>76</b></span><span>10 小时前</span></div>
+        </article>
+        <article class="content-card">
+          <h3>选手状态观察：连续作战下的体能分配</h3>
+          <div class="tags"><span class="tag">选手状态</span><span class="tag hot">每日大赛</span><span class="tag">体能分配</span></div>
+          <p class="desc">连续多日比赛对专注度提出更高要求，几位选手的轮换与准备方式被拿来讨论。</p>
+          <div class="meta"><span>讨论指数 <b>73</b></span><span>12 小时前</span></div>
+        </article>
+        <article class="content-card">
+          <h3>观众投票：今日最想回看的比赛片段</h3>
+          <div class="tags"><span class="tag">吃瓜互动</span><span class="tag">回看片段</span><span class="tag hot">今日大赛</span></div>
+          <p class="desc">多个精彩回合进入候选，逆风翻盘与决胜局操作暂时领先，投票结果仅作讨论参考。</p>
+          <div class="meta"><span>讨论指数 <b>69</b></span><span>14 小时前</span></div>
+        </article>
+      </div>
+      <p class="no-result" id="searchNoResult">没有找到匹配的内容，换个关键词试试。</p>
+    </section>
+
+    <!-- 3. 最新更新 / 动态 -->
+    <section class="card" id="latest">
+      <div class="section-head">
+        <h2>每日动态：最新更新与热播条目<small>按更新时间排列的 10 条动态</small></h2>
+      </div>
+      <ul class="update-list">
+        <li><span class="time">15:40</span><span><span class="name">焦点战决胜局回放</span><span class="brief"> · 关键回合操作与赛后数据已整理</span></span></li>
+        <li><span class="time">14:55</span><span><span class="name">选手“小北”采访片段</span><span class="brief"> · 回应临场选择与下一轮准备</span></span></li>
+        <li><span class="time">14:10</span><span><span class="name">今日大赛赛程更新</span><span class="brief"> · 晚间场时间与对阵双方确认</span></span></li>
+        <li><span class="time">13:25</span><span><span class="name">后台花絮短片</span><span class="brief"> · 候场区互动与工作人员准备画面</span></span></li>
+        <li><span class="time">12:40</span><span><span class="name">B 组晋级形势图解</span><span class="brief"> · 小分与剩余场次对照</span></span></li>
+        <li><span class="time">11:50</span><span><span class="name">解说台观点整理</span><span class="brief"> · 本轮节奏与运营细节讨论</span></span></li>
+        <li><span class="time">10:30</span><span><span class="name">选手状态观察</span><span class="brief"> · 连续作战下的准备方式</span></span></li>
+        <li><span class="time">09:45</span><span><span class="name">观众投票开启</span><span class="brief"> · 今日最想回看的比赛片段</span></span></li>
+        <li><span class="time">08:20</span><span><span class="name">昨日精彩回合回顾</span><span class="brief"> · 三个高讨论度片段集中回看</span></span></li>
+        <li><span class="time">07:10</span><span><span class="name">今日大赛前瞻</span><span class="brief"> · 对阵双方近期状态与看点提示</span></span></li>
+      </ul>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="card" id="categories">
+      <div class="section-head">
+        <h2>赛事分类：按内容方向快速定位<small>8 个分类入口，对应常见搜索需求</small></h2>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-item" href="/#hot">今日大赛赛程<span>时间与对阵</span></a>
+        <a class="cat-item" href="/#hot">选手花絮<span>后台与采访</span></a>
+        <a class="cat-item" href="/#deep">晋级形势<span>小组出线分析</span></a>
+        <a class="cat-item" href="/#news">赛后采访<span>关键发言整理</span></a>
+        <a class="cat-item" href="/#hot">实时讨论<span>观众话题聚合</span></a>
+        <a class="cat-item" href="/#deep">赛事看点<span>焦点对决前瞻</span></a>
+        <a class="cat-item" href="/#latest">每日动态<span>更新与热播</span></a>
+        <a class="cat-item" href="/#rec">吃瓜推荐<span>轻松向内容</span></a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析正文 -->
+    <section class="card deep" id="deep">
+      <div class="section-head">
+        <h2>深度解析：今日大赛的看点与讨论脉络<small>从赛程、选手到场外话题的观察</small></h2>
+      </div>
+
+      <h3>赛程推进中的关键节点</h3>
+      <p>今日大赛进入关键轮次，多场比赛的结果会直接影响后续对阵。对观众来说，先看赛程安排再决定追哪一场，比从头到尾平均用力更省时间。今日大赛每日大赛吃瓜的内容组织也围绕这个逻辑展开：把焦点战、晋级形势和选手状态放在靠前位置，方便快速抓重点。</p>
+      <p>从已赛场次看，本轮节奏偏快，领先方更倾向于主动压缩回合，落后方则尝试通过调整节奏寻找机会。这种变化让比赛的前中段更有讨论空间，也让赛后复盘成为热门内容之一。</p>
+      <ul>
+        <li>焦点战进入决胜局的概率上升，临场调整成为分水岭。</li>
+        <li>小组出线名额仍有变数，小分计算被频繁讨论。</li>
+        <li>连续作战下，选手的体能分配与专注度受到关注。</li>
+      </ul>
+
+      <h3>选手状态与场外花絮</h3>
+      <p>比赛之外，选手采访和后台花絮是吃瓜内容的重要补充。今日大赛每日大赛吃瓜的讨论中，选手在候场区的互动、采访中的表达方式，往往和比赛结果一起构成话题。对这些内容，建议区分“事实信息”和“观众解读”：采访发言可以作为了解选手状态的参考，但不必过度延伸。</p>
+      <p>从目前更新的采访看，多位选手提到临场沟通和赛前准备的重要性。有观众把这些发言与比赛中的关键回合对应起来讨论，形成了一部分深度内容。这类讨论适合搭配回放片段一起看，信息更完整。</p>
+
+      <h3>如何选择值得追的条目</h3>
+      <p>面对每日更新的多条内容，可以按三个维度筛选：是否与自己关注的选手或对阵有关、是否包含具体信息（赛程、数据、采访原话）、讨论是否集中在比赛本身。满足其中两项的条目，通常更值得花时间。今日大赛每日大赛吃瓜的相关推荐也按这个思路整理，避免只堆热度。</p>
+      <p>如果只是想轻松吃瓜，可以优先看花絮和观众讨论；如果想跟进晋级形势，则建议看深度解析和赛程更新。两种浏览方式并不冲突，按当天时间安排切换即可。</p>
+    </section>
+
+    <!-- 6. 体验指南 -->
+    <section class="card" id="guide">
+      <div class="section-head">
+        <h2>体验指南：按赛程追更与筛选内容<small>给不同观看习惯的观众</small></h2>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <h3>先看赛程再选条目</h3>
+          <p>从“今日大赛赛程”入口确认时间与对阵，再决定追热门看点还是选手花絮。</p>
+        </div>
+        <div class="guide-item">
+          <h3>用分类缩小范围</h3>
+          <p>八个分类对应赛程、花絮、晋级形势、采访等方向，适合按兴趣快速定位。</p>
+        </div>
+        <div class="guide-item">
+          <h3>关注更新节奏</h3>
+          <p>关键轮次前后更新较集中，可先看“每日动态”了解最新变化，再回看深度内容。</p>
+        </div>
+        <div class="guide-item">
+          <h3>区分事实与讨论</h3>
+          <p>采访原话与观众解读分开看，能减少误读；讨论类内容更适合当作话题参考。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="card" id="faq">
+      <div class="section-head">
+        <h2>常见问答：关于今日大赛吃瓜的 6 个问题<small>围绕赛程、内容类型与浏览方式</small></h2>
+      </div>
+      <details>
+        <summary>今日大赛每日大赛吃瓜一般包含哪些内容？</summary>
+        <div class="answer">主要包括赛程看点、选手花絮、赛后采访、晋级形势分析和观众讨论。不同日期更新重点不同，关键轮次会更多集中在焦点战与出线分析上。</div>
+      </details>
+      <details>
+        <summary>想看选手花絮，应该从哪个分类进入？</summary>
+        <div class="answer">可以在分类入口选择“选手花絮”，或直接查看热门看点中的后台花絮条目。花絮通常较短，适合碎片时间浏览。</div>
+      </details>
+      <details>
+        <summary>每日大赛的赛程一般什么时间更新？</summary>
+        <div class="answer">赛程信息通常在对阵确认后更新，页面会放在“今日大赛赛程”分类与每日动态中。遇到临时调整，以最新更新条目为准。</div>
+      </details>
+      <details>
+        <summary>晋级形势分析适合什么时间看？</summary>
+        <div class="answer">适合在小组赛末轮或关键场次前看，能帮助理解出线条件与小分影响。赛后回看也可以对照实际结果。</div>
+      </details>
+      <details>
+        <summary>吃瓜内容和赛事讨论有什么区别？</summary>
+        <div class="answer">吃瓜内容偏轻松，包含花絮、观众话题和采访片段；赛事讨论更聚焦比赛本身，如战术选择、节奏变化和数据表现。两者可以搭配浏览。</div>
+      </details>
+      <details>
+        <summary>没有完整时间追比赛，怎么快速了解今日重点？</summary>
+        <div class="answer">先看每日动态和热门看点，再按兴趣进入深度解析或采访条目。这样能在较短时间内掌握今日大赛的主要话题与结果。</div>
+      </details>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="card" id="comments">
+      <div class="section-head">
+        <h2>观众评论：今日大赛讨论区<small>14 条示例评论，语气多样</small></h2>
+      </div>
+      <div class="comment-list">
+        <div class="comment"><div class="who"><b>看台第七排</b><span>2 小时前</span></div>决胜局那个调整确实关键，赛后采访也提到了，信息对得上。</div>
+        <div class="comment"><div class="who"><b>瓜田不迷路</b><span>2 小时前</span></div>今天花絮挺有意思，候场区比正赛还放松。</div>
+        <div class="comment"><div class="who"><b>晚场观众</b><span>3 小时前</span></div>赛程整理得清楚，晚上三场时间不冲突，可以都看。</div>
+        <div class="comment"><div class="who"><b>数据边上坐</b><span>4 小时前</span></div>B 组小分分析有点复杂，但看完大概明白出线条件了。</div>
+        <div class="comment"><div class="who"><b>只吃一口瓜</b><span>4 小时前</span></div>比较喜欢这种短条目，不用从头翻到尾。</div>
+        <div class="comment"><div class="who"><b>回放收藏夹</b><span>5 小时前</span></div>逆风翻盘那场想再回看一遍，关键回合值得暂停看。</div>
+        <div class="comment"><div class="who"><b>解说声音小</b><span>6 小时前</span></div>解说提到节奏偏快，我也有同感，这轮比赛结束得比之前快。</div>
+        <div class="comment"><div class="who"><b>前排小板凳</b><span>6 小时前</span></div>采访发言还是别过度解读，等下一轮打完再看状态更准。</div>
+        <div class="comment"><div class="who"><b>周末补赛</b><span>8 小时前</span></div>分类入口挺实用，直接点花絮就行，不用混着看。</div>
+        <div class="comment"><div class="who"><b>冷静吃瓜</b><span>9 小时前</span></div>热门看点里有些讨论偏主观，建议搭配赛程和数据一起看。</div>
+        <div class="comment"><div class="who"><b>小分计算器</b><span>10 小时前</span></div>晋级形势那段有帮助，尤其是剩余场次对照。</div>
+        <div class="comment"><div class="who"><b>路过看一眼</b><span>11 小时前</span></div>平时不追全程，今天从热门条目进来，基本知道发生了什么。</div>
+        <div class="comment"><div class="who"><b>花生配比赛</b><span>12 小时前</span></div>后台花絮比想象中短，适合等场间隙看。</div>
+        <div class="comment"><div class="who"><b>明晚还来</b><span>13 小时前</span></div>希望明天赛程早点更新，方便安排时间。</div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="card" id="news">
+      <div class="section-head">
+        <h2>赛事资讯：今日大赛相关报道<small>6 条示例资讯，按时间排列</small></h2>
+      </div>
+      <ul class="news-list">
+        <li>
+          <div class="title">今日大赛关键轮次对阵确认<span class="date">2025-03-18</span></div>
+          <div class="sum">晚间场三组对阵公布，其中两场涉及小组出线名额，赛程页面已同步更新。</div>
+        </li>
+        <li>
+          <div class="title">选手采访：临场沟通比预设方案更重要<span class="date">2025-03-18</span></div>
+          <div class="sum">赛后采访中多位选手提到关键回合的沟通细节，相关片段进入今日热门回看候选。</div>
+        </li>
+        <li>
+          <div class="title">后台花絮短片发布，候场区互动引讨论<span class="date">2025-03-17</span></div>
+          <div class="sum">短片记录选手候场与工作人员准备画面，观众对轻松氛围讨论较多。</div>
+        </li>
+        <li>
+          <div class="title">B 组晋级形势图解更新，末轮成关键<span class="date">2025-03-17</span></div>
+          <div class="sum">结合小分与剩余场次，B 组仍存在多种出线可能，图解已在深度解析中补充。</div>
+        </li>
+        <li>
+          <div class="title">解说台复盘：本轮节奏变化与运营选择<span class="date">2025-03-16</span></div>
+          <div class="sum">复盘内容围绕节奏变化展开，观众讨论集中在细节处理与临场选择。</div>
+        </li>
+        <li>
+          <div class="title">观众投票开启：今日最想回看的比赛片段<span class="date">2025-03-16</span></div>
+          <div class="sum">多个精彩回合进入候选，逆风翻盘与决胜局操作暂时领先。</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="card" id="rec">
+      <div class="section-head">
+        <h2>相关推荐：可继续浏览的赛事方向<small>按具体内容方向整理的标签</small></h2>
+      </div>
+      <div class="rec-tags">
+        <a href="/#hot">今日大赛赛程</a>
+        <a href="/#hot">选手后台花絮</a>
+        <a href="/#deep">小组出线形势</a>
+        <a href="/#news">赛后采访原话</a>
+        <a href="/#comments">观众实时讨论</a>
+        <a href="/#latest">每日动态追踪</a>
+        <a href="/#deep">焦点战复盘</a>
+        <a href="/#hot">吃瓜轻松条目</a>
+      </div>
+    </section>
+
+    <!-- 11. 趋势观察 + 12. 编辑精选 -->
+    <section class="card" id="trend">
+      <div class="section-head">
+        <h2>趋势观察：今日大赛讨论方向<small>从更新内容中归纳的三个观察</small></h2>
+      </div>
+      <div class="trend">
+        <div class="trend-item">
+          <h3>焦点战讨论更集中</h3>
+          <p>关键回合与临场调整成为讨论核心，赛后采访和回放片段被频繁对照。</p>
+        </div>
+        <div class="trend-item">
+          <h3>花絮类内容停留时间变长</h3>
+          <p>轻松的候场互动与采访片段，成为正赛之间的调剂内容。</p>
+        </div>
+        <div class="trend-item">
+          <h3>出线分析需求上升</h3>
+          <p>随着小组赛推进，小分计算与剩余场次对照的关注度明显增加。</p>
+        </div>
+        <div class="trend-item">
+          <h3>观众更在意信息来源</h3>
+          <p>采访原话与主观解读被区分看待，讨论更倾向结合具体回合。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="picks">
+      <div class="section-head">
+        <h2>编辑精选：今日大赛值得回看的 6 个条目<small>侧重信息量与话题度的组合</small></h2>
+      </div>
+      <ul class="update-list">
+        <li><span class="time">精选</span><span><span class="name">决胜局关键回合回放</span><span class="brief"> · 适合对照赛后采访一起看</span></span></li>
+        <li><span class="time">精选</span><span><span class="name">选手“小北”采访完整版</span><span class="brief"> · 包含临场选择与下一轮准备</span></span></li>
+        <li><span class="time">精选</span><span><span class="name">B 组晋级形势图解</span><span class="brief"> · 小分与剩余场次一目了然</span></span></li>
+        <li><span class="time">精选</span><span><span class="name">后台花絮短片</span><span class="brief"> · 候场区互动与轻松氛围</span></span></li>
+        <li><span class="time">精选</span><span><span class="name">解说台节奏复盘</span><span class="brief"> · 理解本轮比赛变化</span></span></li>
+        <li><span class="time">精选</span><span><span class="name">今日赛程一览</span><span class="brief"> · 晚间场时间与对阵</span></span></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- 右栏：辅助阅读 -->
+  <aside class="col-right" aria-label="辅助阅读">
+    <div class="side-title">页内目录</div>
+    <ul class="toc-list">
+      <li><a href="/#intro">吃瓜速览</a></li>
+      <li><a href="/#hot">热门看点</a></li>
+      <li><a href="/#latest">每日动态</a></li>
+      <li><a href="/#categories">赛事分类</a></li>
+      <li><a href="/#deep">深度解析</a></li>
+      <li><a href="/#guide">体验指南</a></li>
+      <li><a href="/#faq">常见问答</a></li>
+      <li><a href="/#comments">观众评论</a></li>
+      <li><a href="/#news">赛事资讯</a></li>
+      <li><a href="/#rec">相关推荐</a></li>
+      <li><a href="/#trend">趋势观察</a></li>
+      <li><a href="/#picks">编辑精选</a></li>
+    </ul>
+
+    <div class="side-title" style="margin-top:22px">热门条目</div>
+    <ul class="hot-list">
+      <li><span class="rank">01</span><a href="/#hot">蓝队逆风翻盘进入决胜局</a></li>
+      <li><span class="rank">02</span><a href="/#hot">选手“小北”赛后采访</a></li>
+      <li><span class="rank">03</span><a href="/#latest">今日大赛赛程一览</a></li>
+      <li><span class="rank">04</span><a href="/#hot">后台花絮：候场区互动</a></li>
+      <li><span class="rank">05</span><a href="/#deep">B 组晋级形势分析</a></li>
+      <li><span class="rank">06</span><a href="/#hot">解说台观点整理</a></li>
+    </ul>
+
+    <div class="side-title" style="margin-top:22px">延伸阅读</div>
+    <ul class="hot-list">
+      <li><a href="/#deep">赛事看点：焦点对决前瞻</a></li>
+      <li><a href="/#news">赛后采访关键发言</a></li>
+      <li><a href="/#comments">观众实时讨论汇总</a></li>
+      <li><a href="/#guide">按赛程追更的方法</a></li>
+    </ul>
+  </aside>
+
+</main>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <b>今日大赛每日大赛吃瓜</b>
+        <p>聚合每日大赛的赛程看点、选手花絮、赛后采访与观众讨论，按内容方向整理，方便快速浏览当天话题。</p>
+      </div>
+      <div class="footer-col">
+        <h3>内容频道</h3>
+        <a href="/#hot">热门看点</a>
+        <a href="/#latest">每日动态</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#news">赛事资讯</a>
+      </div>
+      <div class="footer-col">
+        <h3>分类入口</h3>
+        <a href="/#categories">今日大赛赛程</a>
+        <a href="/#categories">选手花絮</a>
+        <a href="/#categories">晋级形势</a>
+        <a href="/#categories">吃瓜推荐</a>
+      </div>
+      <div class="footer-col">
+        <h3>互动与说明</h3>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">观众评论</a>
+        <a href="/#rec">相关推荐</a>
+        <a href="/#trend">趋势观察</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>部分内容为示例数据，仅用于展示页面结构。</span>
+      <span>© 2025 今日大赛每日大赛吃瓜 · 内容示例页</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var searchInput = document.getElementById('siteSearch');
+    var searchBtn = document.getElementById('searchBtn');
+    var noResult = document.getElementById('searchNoResult');
+    var articles = Array.prototype.slice.call(document.querySelectorAll('.content-card'));
+
+    function doSearch(){
+      var q = (searchInput.value || '').trim().toLowerCase();
+      if(!q){
+        articles.forEach(function(el){ el.style.display = ''; });
+        if(noResult) noResult.style.display = 'none';
+        return;
+      }
+      var found = 0;
+      articles.forEach(function(el){
+        var text = el.textContent.toLowerCase();
+        if(text.indexOf(q) !== -1){
+          el.style.display = '';
+          found++;
+        } else {
+          el.style.display = 'none';
+        }
+      });
+      if(noResult) noResult.style.display = found ? 'none' : 'block';
+    }
+
+    if(searchBtn){
+      searchBtn.addEventListener('click', doSearch);
+    }
+    if(searchInput){
+      searchInput.addEventListener('keydown', function(e){
+        if(e.key === 'Enter'){
+          e.preventDefault();
+          doSearch();
+        }
+      });
+      searchInput.addEventListener('input', function(){
+        if(!searchInput.value.trim()) doSearch();
+      });
+    }
+  })();
+</script>
+</body>
+                                                                    </html>
